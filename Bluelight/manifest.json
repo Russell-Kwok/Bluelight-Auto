@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Bluelight",
+  "version": "1.0",
+  "description": "Automatically creates a warm overlay on bright pages.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
